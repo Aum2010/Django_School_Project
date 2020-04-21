@@ -1,0 +1,32 @@
+{% extends 'school/index.html' %}
+
+{% block content %}
+
+<div class="table table-dark">
+
+  <table style="margin-left: auto; margin-right: auto; width: 50%;" >
+        <thead>
+          <tr>
+            <th scope="col">ชื่อ</th>
+            <th scope="col">นามสกุล</th>
+            <th scope="col">วิชา</th>
+            <th scope="col">คะแนน</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in score %}
+          <tr>
+          <td scope="col">{{i.student_name}}</td>
+          <td scope="col">{{i.student_last}}</td>
+          <td scope="col">{{i.subject}}</td>
+          <td scope="col">{{i.score}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  
+  </div>
+    
+
+
+{% endblock %}
